@@ -1,8 +1,6 @@
 import time
 
 # 1. About the game
-import time
-
 print("Welcome to the captivating adventure of 'Escape From the Cave'!")
 
 time.sleep(2)
@@ -34,18 +32,31 @@ def about_history():
         "With your seasoned experience in adventurous pursuits, you find yourself at the forefront\n"
         "of this unexpected challenge, taking charge to lead your friends to safety.")
 
+def explore_dark_tunnels():
+    print("You decide to delve into the dark tunnels, guided only by the faint glow of your flashlight.\n"
+        "As you navigate through the winding passages, you discover ancient markings on the cave walls.\n"
+        "Each turn presents new challenges and mysteries. The air becomes thick with anticipation.")
+
+def search_for_high_ground():
+    print("Opting for the high ground, you lead your group to a steep incline within the cave.\n"
+        "Climbing higher, you find a hidden chamber with a narrow opening leading to the surface.\n"
+        "The ascent is perilous, but the promise of escape drives you and your friends forward.")
 
 # Conditional to start the game or not.
 if continue_exit == "y":
-    print("Uhuul!! Let's see if you can save everyone!")
+    print("Your journey begins...")
     time.sleep(5)
     about_history()
+    
+    print("\nYou find yourself standing at a crossroads within the cave.\n"
+        "Two paths stretch out before you. What will you choose?")
+    
+    player_choose = input("Press 1 to explore the dark tunnels\n"
+                        "Press 2 to search for high ground")
+    
+    if player_choose == "1":
+        explore_dark_tunnels()
+    else:
+        search_for_high_ground()
 else:
-    print("Bye bye! Hope to see you soon!")
-
-
-# 2. Tell the history about the game
-
-# 3. The user choose his name
-
-# 4. 
+    print("Thank you for considering 'Escape from the cave'. Hope to see you soon.")
