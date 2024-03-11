@@ -1,3 +1,7 @@
-# Your code goes here.
-# You can delete these comments, but do not change the name of this file
-# Write your code to expect a terminal of 80 characters wide and 24 rows high
+# 1. Build the history
+
+# 2. Tell the history about the game
+
+# 3. The user choose his name
+
+# 4. 
