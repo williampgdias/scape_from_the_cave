@@ -54,12 +54,17 @@ def search_for_high_ground():
 #################### PART 2 ####################
 
 '''
-    Function if the user choose the explore_dark_tunnels
+    Functions if the user choose the explore_dark_tunnels
 '''
 def follow_mysterious_symbols():
     print("Intrigued by the ancient symbols, you follow their trail deeper into the labyrinth of tunnels.\n"
         "Each symbol seems to lead you further into the heart of the cave, hinting at a hidden secret.\n"
         "The air grows colder as you press onward, anticipation building with each step.")
+    
+def retreat_and_regroup():
+    print("Sensing the increasing danger, you decide to retreat from the dark tunnels and regroup with your friends.\n"
+        "Backtracking your steps, you return to the crossroads, where safety lies in familiarity.\n"
+        "Though the path ahead remains uncertain, you know you must face the challenges together.")
 
 '''
     This IF is to start the game or exit.
@@ -81,17 +86,29 @@ if continue_exit == "y":
     
     if player_choose == "1":
         explore_dark_tunnels()
+        
+        time.sleep(2)
+        
+        print('\nAs you journey deeper, you encounter two distinct paths ahead.')
+        
+        user_choice_tunnel = input("1. Follow the Mysterious Symbols\n"
+                                "2. Retreat and Regroup\n"
+                                ">>> ")
+        if player_choose == '1':
+            print('')
+            time.sleep(1.5)
+            follow_mysterious_symbols()
+        elif player_choose == '2':
+            print('')
+            retreat_and_regroup()
+        else:
+            print("Invalid choice. The adventure awaits, make a valid selection.")
+            
     elif player_choose == "2":
         search_for_high_ground()
     else:
         print("Invalid choice. The adventure awaits, make a valid selection.")
     
-    if player_choose == '1':
-        print('')
-        time.sleep(2)
-        follow_mysterious_symbols()
-    elif player_choose == '2':
-        print('You chose the option 2')
     
 elif continue_exit == "n":
     print("Thank you for considering 'Escape from the cave'. Hope to see you soon.")
