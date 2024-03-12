@@ -45,18 +45,21 @@ def search_for_high_ground():
 # Conditional to start the game or not.
 if continue_exit == "y":
     print("Your journey begins...")
-    time.sleep(5)
+    time.sleep(3)
     about_history()
     
     print("\nYou find yourself standing at a crossroads within the cave.\n"
         "Two paths stretch out before you. What will you choose?")
     
     player_choose = input("Press 1 to explore the dark tunnels\n"
-                        "Press 2 to search for high ground")
+                        "Press 2 to search for high ground\n"
+                        ">>>> ")
     
     if player_choose == "1":
         explore_dark_tunnels()
     else:
         search_for_high_ground()
-else:
+elif continue_exit == "n":
     print("Thank you for considering 'Escape from the cave'. Hope to see you soon.")
+else:
+    print("Invalid input. Please restart the game and choose between Y or N.")
