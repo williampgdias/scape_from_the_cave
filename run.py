@@ -67,6 +67,19 @@ def retreat_and_regroup():
         "Though the path ahead remains uncertain, you know you must face the challenges together.")
 
 '''
+Functions if the user choose the search_for_high_ground
+'''
+def climb_steep_incline():
+    print("Opting to climb the steep incline, you and your friends begin the arduous ascent.\n"
+        "Each foothold is precarious, but the determination to escape fuels your climb.\n"
+        "With every passing moment, you draw closer to the surface, freedom within reach.")
+
+def investigate_hidden_chamber():
+    print("Intrigued by the hidden chamber, you cautiously enter, your senses heightened.\n"
+        "The chamber is adorned with ancient artifacts, hinting at a forgotten civilization.\n"
+        "Though the allure of discovery beckons, the urgency to escape remains.")
+
+'''
     This IF is to start the game or exit.
     If the user press Y, the game will start 
     and the user will play to the end.
@@ -106,6 +119,19 @@ if continue_exit == "y":
             
     elif player_choose == "2":
         search_for_high_ground()
+        
+        time.sleep(2)
+        
+        print('\nAs you reach the chamber, two choices lie before you.')
+        
+        user_choice_high_ground = input("1. Climb the Step Incline\n"
+                                    "2. Investigate the Hidden Chamber\n"
+                                    ">>> ")
+        
+        if user_choice_high_ground == '1':
+            climb_steep_incline()
+        else:
+            investigate_hidden_chamber()
     else:
         print("Invalid choice. The adventure awaits, make a valid selection.")
     
