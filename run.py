@@ -8,8 +8,7 @@ time.sleep(2)
 print("Embark on an epic RPG journey where your choices shape the course of the game.\n"
     "Each decision you make leads to a unique path, ensuring a thrilling and unpredictable experience.")
 
-continue_exit = input("Are you ready to dive into the unknown?\n"
-                    "Press Y to continue or N to exit: ").lower()
+
 
 
 def user_choice_high_ground():
@@ -156,66 +155,72 @@ def investigate_hidden_chamber():
     If the user press N, the game will stop
 '''
 continue_condition = True
-if continue_exit == "y":
-    print("\nYour journey begins...")
-    time.sleep(3)
-    intro_history()
-    
-    print("\nYou find yourself standing at a crossroads within the cave.\n"
-        "Two paths stretch out before you. What will you choose?")
-    
-    player_choose = input("1. Explore the Dark Tunnels\n"
-                        "2. Search for High Ground\n"
-                        ">>> ")
-    
-    if player_choose == "1":
-        explore_dark_tunnels()
-        
-        time.sleep(2)
-        
-        print('\nAs you journey deeper, you encounter two distinct paths ahead.')
-        
-        user_choice_tunnel = input("1. Follow the Mysterious Symbols\n"
-                                "2. Retreat and Regroup\n"
-                                ">>> ")
-        
-        if user_choice_tunnel == '1':
-            print('')
-            time.sleep(1.5)
-            follow_mysterious_symbols()
-            
-            # GAME OVER
-            
-        elif user_choice_tunnel == '2':
-            print('')
-            retreat_and_regroup()
 
-            print('')
+while continue_condition:
+    continue_exit = input("Are you ready to dive into the unknown?\n"
+                    "Press Y to continue or N to exit: ").lower()
+        
+    if continue_exit == "y":
+        print("\nYour journey begins...")
+        time.sleep(3)
+        intro_history()
+        
+        print("\nYou find yourself standing at a crossroads within the cave.\n"
+            "Two paths stretch out before you. What will you choose?")
+        
+        player_choose = input("1. Explore the Dark Tunnels\n"
+                            "2. Search for High Ground\n"
+                            ">>> ")
+        
+        if player_choose == "1":
+            explore_dark_tunnels()
+            
+            time.sleep(2)
+            
+            print('\nAs you journey deeper, you encounter two distinct paths ahead.')
+            
+            user_choice_tunnel = input("1. Follow the Mysterious Symbols\n"
+                                    "2. Retreat and Regroup\n"
+                                    ">>> ")
+            
+            if user_choice_tunnel == '1':
+                print('')
+                time.sleep(1.5)
+                follow_mysterious_symbols()
+                
+                # GAME OVER
+                
+            elif user_choice_tunnel == '2':
+                print('')
+                retreat_and_regroup()
+
+                print('')
+                search_for_high_ground()
+                
+                time.sleep(2)
+            
+                print('\nAs you reach the chamber, two choices lie before you.')
+                
+                user_choice_high_ground()
+            
+            else:
+                
+                print("Invalid choice. The adventure awaits, make a valid selection.")
+
+        elif player_choose == "2":
             search_for_high_ground()
             
             time.sleep(2)
-        
+            
             print('\nAs you reach the chamber, two choices lie before you.')
-            
+
             user_choice_high_ground()
-        
         else:
-            
             print("Invalid choice. The adventure awaits, make a valid selection.")
-
-    elif player_choose == "2":
-        search_for_high_ground()
         
-        time.sleep(2)
         
-        print('\nAs you reach the chamber, two choices lie before you.')
-
-        user_choice_high_ground()
+    elif continue_exit == "n":
+        print("Thank you for considering 'Escape from the cave'. Hope to see you soon.")
+        continue_condition = False
     else:
-        print("Invalid choice. The adventure awaits, make a valid selection.")
-    
-    
-elif continue_exit == "n":
-    print("Thank you for considering 'Escape from the cave'. Hope to see you soon.")
-else:
-    print("Invalid input. Please restart the game and choose between Y or N.")
+        print("Invalid input. Please restart the game and choose between Y or N.")
