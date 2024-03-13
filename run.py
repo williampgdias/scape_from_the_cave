@@ -12,6 +12,24 @@ continue_exit = input("Are you ready to dive into the unknown?\n"
                     "Press Y to continue or N to exit: ").lower()
 
 
+def user_choice_high_ground():
+    
+    user_choice_high_ground = input("1. Climb the Step Incline\n"
+                                    "2. Investigate the Hidden Chamber\n"
+                                    ">>> ")
+    
+    if user_choice_high_ground == '1':
+        climb_steep_incline()
+        
+        # WIN THE GAME
+    elif user_choice_high_ground == '2':
+        investigate_hidden_chamber()
+        
+        # GAME OVER
+    else:
+        
+        print("Invalid choice. The adventure awaits, make a valid selection.")
+
 #################### PART 1 ####################
 
 '''
@@ -103,6 +121,8 @@ def retreat_and_regroup():
         "With unity as your shield, you embark once more into the depths of the cave,\n"
         "ready to confront whatever mysteries await.")
 
+
+#################### PART 3 ####################
 '''
 Functions if the user choose the search_for_high_ground
 '''
@@ -111,23 +131,23 @@ def climb_steep_incline():
         "Each foothold is precarious, but the determination to escape fuels your climb.\n"
         "With every passing moment, you draw closer to the surface, freedom within reach.")
 
+    time.sleep(2)
+
+    print("\nAs you reach the surface, a wave of relief washes over you.\n"
+        "You emerge from the cave, victorious, and bask in the warmth of the sunlight.\n"
+        "Congratulations! You have successfully escaped the cave. You win the game!")
+
 def investigate_hidden_chamber():
     print("Intrigued by the hidden chamber, you cautiously enter, your senses heightened.\n"
         "The chamber is adorned with ancient artifacts, hinting at a forgotten civilization.\n"
         "Though the allure of discovery beckons, the urgency to escape remains.")
 
-def user_choice_high_ground():
-    
-    user_choice_high_ground = input("1. Climb the Step Incline\n"
-                                    "2. Investigate the Hidden Chamber\n"
-                                    ">>> ")
-    
-    if user_choice_high_ground == '1':
-        climb_steep_incline()
-    elif user_choice_high_ground == '2':
-        investigate_hidden_chamber()
-    else:
-        print("Invalid choice. The adventure awaits, make a valid selection.")
+    time.sleep(6)
+
+    print("\nSuddenly, the chamber begins to shake violently as ancient traps are triggered.\n"
+        "The ceiling collapses, sealing your fate within the depths of the cave.\n"
+        "Your journey ends here. Game Over.")
+
 
 '''
     This IF is to start the game or exit.
@@ -135,8 +155,9 @@ def user_choice_high_ground():
     and the user will play to the end.
     If the user press N, the game will stop
 '''
+continue_condition = True
 if continue_exit == "y":
-    print("Your journey begins...")
+    print("\nYour journey begins...")
     time.sleep(3)
     intro_history()
     
@@ -168,6 +189,7 @@ if continue_exit == "y":
         elif user_choice_tunnel == '2':
             print('')
             retreat_and_regroup()
+
             print('')
             search_for_high_ground()
             
@@ -175,11 +197,10 @@ if continue_exit == "y":
         
             print('\nAs you reach the chamber, two choices lie before you.')
             
-            
-            
             user_choice_high_ground()
         
         else:
+            
             print("Invalid choice. The adventure awaits, make a valid selection.")
 
     elif player_choose == "2":
@@ -188,9 +209,7 @@ if continue_exit == "y":
         time.sleep(2)
         
         print('\nAs you reach the chamber, two choices lie before you.')
-        
-        
-        
+
         user_choice_high_ground()
     else:
         print("Invalid choice. The adventure awaits, make a valid selection.")
