@@ -1,4 +1,5 @@
 import time
+import sys
 
 print("Welcome to the captivating adventure of 'Escape From the Cave'!")
 
@@ -58,7 +59,7 @@ def play_again():
                         print("Invalid choice. The adventure awaits, make a valid selection.")
         elif play_again_input == 'n':
             print("Thanks for playing Scape from the Cave. Hope to see you soon.")
-            exit()
+            sys.exit()
         else:
             print("Invalid choice. Please, make a valid selection.")
 
