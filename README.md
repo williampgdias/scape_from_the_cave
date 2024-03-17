@@ -1,32 +1,13 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# ESCAPE from the Cave
 
-Welcome,
+Scape from the cave is a Python terminal game, which runs in the Code Institute mock terminal on Heroku.
 
-This is the Code Institute student template for deploying your third portfolio project, the Python command-line project. The last update to this file was: **March 14, 2023**
+Welcome to the captivating adventure of **Escape From the Cave**!
 
-## Reminders
+Embark on an epic RPG journey where your choices shape the course of the game. Each decision you make leads to a unique path, ensuring a thrilling and unpredictable experience.
 
-- Your code must be placed in the `run.py` file
-- Your dependencies must be placed in the `requirements.txt` file
-- Do not edit any of the other files or your code may not deploy properly
+In this gripping tale of survival, you find yourself trapped deep within a mysterious cave system. With danger lurking around every corner, you must navigate treacherous tunnels, decipher ancient markings, and overcome formidable obstacles to find your way back to safety.
 
-## Creating the Heroku app
+But beware! The path to freedom is fraught with peril, and your every decision could mean the difference between life and death. Will you muster the courage to explore the dark unknown, or will you seek refuge in the safety of high ground?
 
-When you create the app, you will need to add two buildpacks from the _Settings_ tab. The ordering is as follows:
-
-1. `heroku/python`
-2. `heroku/nodejs`
-
-You must then create a _Config Var_ called `PORT`. Set this to `8000`
-
-If you have credentials, such as in the Love Sandwiches project, you must create another _Config Var_ called `CREDS` and paste the JSON into the value field.
-
-Connect your GitHub repository and deploy as normal.
-
-## Constraints
-
-The deployment terminal is set to 80 columns by 24 rows. That means that each line of text needs to be 80 characters or less otherwise it will be wrapped onto a second line.
-
----
-
-Happy coding!
+The fate of your adventure lies in your hands. Prepare yourself for a journey of discovery, danger, and ultimate triumph as you strive to **Escape From the Cave**!
